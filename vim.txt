@@ -1,0 +1,106 @@
+Refs:
+https://vim.rtorr.com/
+http://www.viemu.com/a-why-vi-vim.html
+http://www.moolenaar.net/habits.html
+https://c9.io/blog/vim-mode-double-your-productivity/
+
+=======================================================
+diB or di{: delete code inside { }
+ciB or ci{: change code inside { }
+
+f(di( or f(dib: go to ( and delete code inside ( )
+f(ci( or f(cib: go to ( and change code inside ( )
+
+[[ciB or [[ci{: go to the beginning of function and change code of this function
+
+[[: go to next function
+]]: go to previous function
+
+[{ / ]}
+
+{ }: go to previous/next empty line (paragraph)
+
+yyp or yyP: copy & paste current line
+
+V + select code of function including signature + yp/yP: copy a function
+
+ya{p or ya{P: copy all code (inside and include { }) of a function (without function signature)
+
+yi{p or yi{P: copy code inside { } of a function
+
+v2i{: visual 2nd loop ???
+
+di( and da(: delete inside / all ( )
+
+v%: yank code inside { } or ( ) or “ ” (mouse must be located at { , } , ( , ) …)
+
+gg or G: go to the beginning/end of a file
+
+:100 or 100G: go to line 100 of a file
+
+vu / vU: lowercase/uppercase a character
+
+Ctrl + u / d: scroll up/down
+
+Ctrl v + jj...jj + I + // + Esc: comment multiple lines
+
+:%!xxd: edit binary files like in hexedit
+:%!xxd -r: exit
+
+C or DAi: removes text from the cursor position to the end of the line and enters insert mode
+C >< Di
+c$ / c0
+S: remove whole and enter insert mode
+
+bye: copy current word
+
+gd: Goto Declaration 
+gD: global declaration of the variable under the cursor
+gJ: join two lines
+gf: open header file
+
+zz / zt / zb: line that has a cursor is in the middle / top / bottom of the screen
+
+ma: mark current position (a-z) 
+‘a: go to marked position a 
+d’a: delete from here to marked position a
+
+V + jj..jj + :fold: fold a block
+zc / zo: close/open a folded block 
+
+ddp: move a line down
+ddkP: move a line up
+
+xp: swap two characters
+
+gi: go back to previous changed location
+]c or [c: go back/forth changed lines git
+
+:.,$d or dL: delete text from current line to the end of the file
+:1,.d: delete from the beginning of the file to current line
+:2,3d: delete line 2, 3
+
+gg=G: indentation whole file
+
+Ctrl wt wH: window horizontally to vertically
+Ctrl wt wK: window vertically to horizontally
+
+ea: insert at the end of this word
+
+* / #: search for current word forward / backward
+
+dap / yap: delete/yank entire paragraph
+
+ma jj..jj d’a: mark a line and go to other line, then delete all text between two lines
+ma jj..jj y’a
+
+Vi in Bash mode: add “set -o vi” in ~/.bashrc
+http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
+http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.pdf
+Press i / Esc to enter insert / command mode
+
+https://dockyard.com/blog/2013/09/26/vim-moving-lines-aint-hard
+https://vimrcfu.com/snippet/77 : How to define keys in spacemacs ???
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
