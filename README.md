@@ -1,0 +1,46 @@
+## Useful Spacemacs commands
+
+- `SPC q q` - quit
+- `SPC w /` - split window vertically
+- `SPC w` - - split window horizontally
+- `SPC 1`   - switch to window 1
+- `SPC 2`   - switch to window 2
+- `SPC w c` - delete current window
+- `SPC TAB` - switch to previous buffer
+- `SPC b b` - switch buffers
+- `SPC f f` - find a file
+- `SPC f s` - save a file (:w also works)
+- `SPC p p` - open project
+- `SPC p h` - find a file in current project
+- `SPC b d` - kill current buffer
+- `SPC b M` - move buffer to another window
+- `SPC v`   - enter expand-region mode
+- `SPC b b` - Helm mini; lists buffers & recent files
+  - `CTRL SPC` - Mark Items
+  - `CTRL z` - Actions
+- `SPC b B` - ibuffer
+- `SPC f f` - open files
+  - `CTRL h` - up a folder
+  - `CTRL l` - open a folder
+  - `CTRL j` - up
+  - `CTRL k` - down
+- `SPC p f` - opens root of project
+- `SPC p p` - opens projects
+- `SPC /` - searches through project
+- `SPC s s` - search in a file
+- `SPC s l` - find all function definitons in a file
+- `SPC v` - expand region
+- `SPC V` - contract region
+- `s (` - put parens around a region
+- `SPC s e` - multiple cursors
+  - `n` - jump
+  - `N` - jump
+- `SPC h d` - help describe
+- `SPC h d f` - help describe functions
+- `SPC h d v` - help describe variables
+- `SPC f e h` - help
+- `ALT /` - snippet completion
+- `SPC t s` - syntax checking
+- `SPC e` - syntax checking options
+- `SPC a r` - ranger
+- `SPC a d` - deer
