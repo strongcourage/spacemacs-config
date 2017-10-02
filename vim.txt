@@ -3,6 +3,11 @@ https://vim.rtorr.com/
 http://www.viemu.com/a-why-vi-vim.html
 http://www.moolenaar.net/habits.html
 https://c9.io/blog/vim-mode-double-your-productivity/
+http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+https://vim.swaroopch.com/
+http://vimhelp.appspot.com/
+http://www.oualline.com/vim-cook.html
+
 
 =======================================================
 diB or di{: delete code inside { }
@@ -93,6 +98,34 @@ dap / yap: delete/yank entire paragraph
 
 ma jj..jj d’a: mark a line and go to other line, then delete all text between two lines
 ma jj..jj y’a
+
+y2/foo: yank up to the second occurrence of foo
+
+<start position><command><end position>:
+Command: y (yank), is also true for d (delete), v (visual select), gU (uppercase), gu (lowercase), etc…
+
+
+
+
+
+If you select some lines then press > to indent the lines, the selection is removed. The indentation can be repeated on the same range using ., but if you still want to retain the visual selection after having pressed > or <, you can use these mappings 
+vnoremap > >gv 
+vnoremap < <gv
+For example: V 3j >gv > > < < <
+
+:g//: lists all lines containing the last search pattern
+
+:redir a + :g// + :redir END + :new + :put! a
+:redir @a: redirect output to register a 
+:g//: repeat last global command 
+:redir: END end redirection 
+:new: create new window 
+:put!: a paste register a into new window
+
+ga: shows the ascii value of the current character
+
+Ctrl-w v + :set scb: split window vertically and scroll 2 windows together
+:set scb!: off
 
 Vi in Bash mode: add “set -o vi” in ~/.bashrc
 http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
